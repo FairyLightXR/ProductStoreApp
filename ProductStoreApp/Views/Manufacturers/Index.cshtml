@@ -1,12 +1,12 @@
-﻿@model IEnumerable<ProductStoreApp.Models.Category>
+﻿@model IEnumerable<ProductStoreApp.Models.Manufacturers>
 
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Категории</h2>
+            <h2 class="text-primary">Производители</h2>
         </div>
         <div class="col-6 text-right">
-            <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
+            <a asp-controller="Manufacturers" asp-action="Create" class="btn btn-primary">
                 Создать
             </a>
         </div>
@@ -20,13 +20,13 @@
             <thead>
                 <tr>
                     <th>
-                        Название
+                        Название Производителя
                     </th>
                     <th>
-                        Описание
+                        Телефон
                     </th>
                     <th>
-                        Рейтинг
+                        Почта
                     </th>
                 </tr>
             </thead>
@@ -34,12 +34,12 @@
                 @foreach (var category in Model)
                 {
                     <tr>
-                        <td width="30%">@category.Title</td>
-                        <td width="40%">@category.Description</td>
-                        <td width="10%">@category.Raiting</td>
+                        <td width="30%">@category.Name</td>
+                        <td width="40%">@category.PhoneNum</td>
+                        <td width="10%">@category.Email</td>
                         <td class="text-center">
                             <div class="w-75 btn-group" role="group">
-                                <a asp-controller="Category" asp-route-Id="@category.Id" asp-action="Edit" class="btn btn-primary mx-2">
+                                <a asp-controller="Manufacturers" asp-route-Id="@category.Id" asp-action="Edit" class="btn btn-primary mx-2">
                                     Изменить
                                 </a>
                                 <a asp-controller="Category" asp-route-Id="@category.Id" asp-action="Delete" class="btn btn-danger mx-2">

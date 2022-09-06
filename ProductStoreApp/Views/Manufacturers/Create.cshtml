@@ -1,4 +1,4 @@
-﻿@model ProductStoreApp.Models.Category
+﻿@model ProductStoreApp.Models.Manufacturers
 
 <form method="post" asp-action="Create">
     <div class="border p-3">
@@ -9,27 +9,27 @@
             <div class="col-8">
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="Title"></label>
+                        <label asp-for="Name"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Title" class="form-control" />
+                        <input asp-for="Name" class="form-control" />
                     </div>
 
                 </div>
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="Description"></label>
+                        <label asp-for="PhoneNum"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Description" class="form-control" />
+                        <input asp-for="PhoneNum" class="form-control" />
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="Raiting"></label>
+                        <label asp-for="Email"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Raiting" class="form-control" />
+                        <input asp-for="Email" class="form-control" />
                     </div>
                 </div>
 
